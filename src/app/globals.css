@@ -1,165 +1,133 @@
+/* globals.css の修正 */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  /* ダークテーマをデフォルトに */
-  --background: #0f172a; /* ダークネイビー */
-  --foreground: #e2e8f0; /* 明るいグレー */
-
-  /* アクセントカラー */
-  --primary: #3b82f6; /* ブルー */
-  --secondary: #10b981; /* グリーン */
-  --accent: #8b5cf6; /* パープル */
-
-  /* コード関連 */
-  --code-bg: #1e293b; /* コードブロック背景 */
-  --code-highlight: #334155; /* コードハイライト */
-
-  /* その他の要素 */
-  --card-bg: #1e293b; /* カード背景 */
-  --border: #334155; /* ボーダー */
-  --muted: #64748b; /* 補足テキスト */
+/* ベースとなる背景色を設定 */
+html, body {
+  background-color: #0b1121;
+  min-height: 100vh;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: "JetBrains Mono", "Fira Code", monospace;
-  line-height: 1.7;
+:root {
+  /* メインカラー */
+  --background: #0b1121;    /* 深いダークネイビー */
+  --foreground: #e2e8f0;    /* 明るいグレー */
+  --header-bg: #151e2d;     /* ヘッダー背景 */
+  
+  /* アクセントカラー */
+  --primary: #60a5fa;       /* 明るいブルー */
+  --neon-green: #4ade80;    /* 蛍光グリーン */
+  --neon-green-glow: #4ade8040; /* グロー効果用 */
+  --accent: #a78bfa;        /* ソフトなパープル */
+  
+  /* コード関連 */
+  --code-bg: #1a2234;       /* コード背景 */
+  --code-block-bg: #161b2b; /* コードブロック背景 */
+}
+
+/* プロースのオーバーライド */
+.prose {
+  --tw-prose-body: #e2e8f0;
+  --tw-prose-headings: #ffffff;
+  --tw-prose-links: #4ade80;
+  --tw-prose-background: #0b1121;
 }
 
 .markdown-content {
-  /* 見出し */
-  h1,
-  h2,
-  h3,
-  h4 {
-    font-family: "Inter", "Roboto", sans-serif;
-    font-weight: 700;
-    color: var(--primary);
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-  }
-
   h1 {
-    font-size: 2.25rem;
-    border-bottom: 2px solid var(--primary);
+    font-size: 2.5rem;
+    color: #ffffff;
+    border-bottom: 1px solid var(--neon-green);
     padding-bottom: 0.5rem;
+    margin: 2rem 0 1.5rem;
+    text-shadow: 0 0 10px var(--neon-green-glow);
   }
 
   h2 {
-    font-size: 1.875rem;
-    border-left: 4px solid var(--secondary);
-    padding-left: 1rem;
+    font-size: 1.75rem;
+    color: #ffffff;
+    border-left: 3px solid var(--neon-green);
+    padding: 0.5rem 1rem;
+    margin: 2rem 0 1rem;
+    background: linear-gradient(90deg, var(--neon-green-glow) 0%, transparent 100%);
   }
 
-  h3 {
-    font-size: 1.5rem;
-    color: var(--accent);
-  }
-
-  /* 段落とリスト */
-  p,
-  ul,
-  ol {
-    margin-bottom: 1.5rem;
-  }
-
-  /* リンク */
-  a {
-    color: var(--primary);
-    text-decoration: none;
-    transition: all 0.2s;
-    &:hover {
-      color: var(--secondary);
-      text-decoration: underline;
-    }
-  }
-
-  /* コードブロック */
+  /* コードブロックの強化 */
   pre {
-    background-color: var(--code-bg);
-    border-radius: 0.5rem;
+    background-color: var(--code-block-bg) !important;
+    border-radius: 8px;
     padding: 1rem;
     margin: 1.5rem 0;
     overflow-x: auto;
-    border: 1px solid var(--border);
+    border: 1px solid #30363d;
+    box-shadow: 0 0 20px var(--neon-green-glow);
   }
 
   /* インラインコード */
   code {
+    color: var(--neon-green);
     background-color: var(--code-bg);
-    color: var(--secondary);
     padding: 0.2rem 0.4rem;
-    border-radius: 0.25rem;
-    font-family: "JetBrains Mono", "Fira Code", monospace;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9em;
   }
 
-  /* 引用 */
-  blockquote {
-    border-left: 4px solid var(--accent);
-    padding-left: 1rem;
-    margin: 1.5rem 0;
-    font-style: italic;
-    color: var(--muted);
+  /* リンクのスタイリング */
+  a {
+    color: var(--neon-green);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    position: relative;
+    
+    &:hover {
+      text-shadow: 0 0 8px var(--neon-green-glow);
+      text-decoration: none;
+      &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: -2px;
+        left: 0;
+        background-color: var(--neon-green);
+        box-shadow: 0 0 8px var(--neon-green);
+      }
+    }
   }
 
-  /* 区切り線 */
-  hr {
-    border: 0;
-    border-top: 2px solid var(--border);
-    margin: 2rem 0;
-  }
-}
-
-/* シンタックスハイライトのカスタマイズ */
-.hljs {
-  background: var(--code-bg) !important;
-  border-radius: 0.5rem;
-}
-
-/* スクロールバーのカスタマイズ */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--background);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--border);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--muted);
-}
-
-/* マークダウンコンテンツの特別なスタイリング */
-.prose pre {
-    background-color: var(--code-bg) !important;
-    border: 1px solid var(--border);
-}
-
-.prose code {
-    background-color: var(--code-bg);
-    color: var(--secondary);
-    padding: 0.2rem 0.4rem;
-    border-radius: 0.25rem;
-}
-
-/* シンタックスハイライトのスタイル */
-.prose pre code {
+  /* 見出しの背景を透明に */
+  h1, h2, h3 {
     background-color: transparent;
-    padding: 0;
-    color: inherit;
+  }
+  
+  /* セクションの区切り */
+  > section {
+    background-color: transparent;
+  }
 }
 
-/* インラインコードのスタイル */
-.prose p code,
-.prose li code {
-    color: var(--primary);
+/* コンテナの背景色を強制 */
+#__next, 
+.prose, 
+.markdown-content {
+  background-color: #0b1121;
+}
+
+/* シンタックスハイライト */
+.hljs-string {
+  color: var(--neon-green) !important;
+}
+
+.hljs-keyword {
+  color: #ff7b72 !important;
+}
+
+/* コードブロック内の特別な行のハイライト */
+.highlight-line {
+  background: linear-gradient(90deg, var(--neon-green-glow) 0%, transparent 100%);
+  display: block;
+  margin: 0 -1rem;
+  padding: 0 1rem;
 }
