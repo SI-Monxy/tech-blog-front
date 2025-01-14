@@ -3,19 +3,163 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* ダークテーマをデフォルトに */
+  --background: #0f172a; /* ダークネイビー */
+  --foreground: #e2e8f0; /* 明るいグレー */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* アクセントカラー */
+  --primary: #3b82f6; /* ブルー */
+  --secondary: #10b981; /* グリーン */
+  --accent: #8b5cf6; /* パープル */
+
+  /* コード関連 */
+  --code-bg: #1e293b; /* コードブロック背景 */
+  --code-highlight: #334155; /* コードハイライト */
+
+  /* その他の要素 */
+  --card-bg: #1e293b; /* カード背景 */
+  --border: #334155; /* ボーダー */
+  --muted: #64748b; /* 補足テキスト */
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  line-height: 1.7;
+}
+
+.markdown-content {
+  /* 見出し */
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Inter", "Roboto", sans-serif;
+    font-weight: 700;
+    color: var(--primary);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.875rem;
+    border-left: 4px solid var(--secondary);
+    padding-left: 1rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    color: var(--accent);
+  }
+
+  /* 段落とリスト */
+  p,
+  ul,
+  ol {
+    margin-bottom: 1.5rem;
+  }
+
+  /* リンク */
+  a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: all 0.2s;
+    &:hover {
+      color: var(--secondary);
+      text-decoration: underline;
+    }
+  }
+
+  /* コードブロック */
+  pre {
+    background-color: var(--code-bg);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+  }
+
+  /* インラインコード */
+  code {
+    background-color: var(--code-bg);
+    color: var(--secondary);
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+  }
+
+  /* 引用 */
+  blockquote {
+    border-left: 4px solid var(--accent);
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  /* 区切り線 */
+  hr {
+    border: 0;
+    border-top: 2px solid var(--border);
+    margin: 2rem 0;
+  }
+}
+
+/* シンタックスハイライトのカスタマイズ */
+.hljs {
+  background: var(--code-bg) !important;
+  border-radius: 0.5rem;
+}
+
+/* スクロールバーのカスタマイズ */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
+/* マークダウンコンテンツの特別なスタイリング */
+.prose pre {
+    background-color: var(--code-bg) !important;
+    border: 1px solid var(--border);
+}
+
+.prose code {
+    background-color: var(--code-bg);
+    color: var(--secondary);
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+}
+
+/* シンタックスハイライトのスタイル */
+.prose pre code {
+    background-color: transparent;
+    padding: 0;
+    color: inherit;
+}
+
+/* インラインコードのスタイル */
+.prose p code,
+.prose li code {
+    color: var(--primary);
 }
