@@ -32,7 +32,7 @@ Route::get('/hello', function () {
 ## Reactフロントエンドの作成
 frontend/src/App.js ファイルを編集し、Laravel APIと通信するコードを追加します。
 
-``` jsx
+``` typescript
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
