@@ -6,6 +6,7 @@ import { remark } from "remark";
 import remarkHtml from "remark-html";
 import { markdownToHtml } from "@/lib/markdownToHtml";
 import "highlight.js/styles/github-dark.css"; // ダークテーマ用のスタイル
+import { BackButton } from "@/components/backButton";
 
 // 動的なパラメータの型定義
 type Props = {
@@ -24,6 +25,7 @@ export default async function PostPage({ params }: Props) {
 
   return (
     <article className="container max-w-4xl py-8">
+      <BackButton />
       <header className="mb-8">
         <h1 className="scroll-m-20 text-4xl font-bold tracking-tight mb-2">
           {post.title}
