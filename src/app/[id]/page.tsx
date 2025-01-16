@@ -23,18 +23,18 @@ export default async function PostPage({ params }: Props) {
   const content = await markdownToHtml(post.contentHtml);
 
   return (
-    <div className="min-h-screen bg-[#0b1121]"> {/* 背景色を強制的に設定 */}
-      <article className="max-w-4xl mx-auto px-4 py-8">
-        <div className="prose prose-invert prose-lg max-w-none">
-          <h1 className="text-4xl font-bold mb-2 text-white">{post.title}</h1>
-          <div className="text-gray-400 mb-8">{post.date}</div>
-          <div 
-            className="markdown-content"
-            dangerouslySetInnerHTML={{ __html: content }} 
-          />
-        </div>
-      </article>
-    </div>
+    <article className="container max-w-4xl py-8">
+      <header className="mb-8">
+        <h1 className="scroll-m-20 text-4xl font-bold tracking-tight mb-2">
+          {post.title}
+        </h1>
+        <time className="text-sm text-muted-foreground">{post.date}</time>
+      </header>
+      <div
+        className="prose prose-slate dark:prose-invert max-w-none"
+        dangerouslySetInnerHTML={{ __html: content }}
+      />
+    </article>
   );
 }
 
