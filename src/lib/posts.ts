@@ -8,6 +8,7 @@ type Post = {
     id: string;
     date: string;
     title: string;
+    description: string;
   // その他必要なフィールド
 }
 // 記事一覧を取得する関数
@@ -26,11 +27,13 @@ export function getSortedPostsData(): Post[] {
         const matterResult = matter(fileContents);
         const date = matterResult.data["date"];
         const title = matterResult.data["title"];
+        const description = matterResult.data["description"];
 
         return {
             id,
             date,
             title,
+            description,
         };
     });
 
