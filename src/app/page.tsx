@@ -6,7 +6,7 @@ import { PostsSkeleton } from '@/components/skeletons'
 
 export default async function Home() {
   return (
-    <div className="container py-8">
+    <div className="container max-w-4xl mx-auto px-4 py-8">
       <h1 className="text-4xl font-bold mb-8">Latest Posts</h1>
       <Suspense fallback={<PostsSkeleton />}>
         <PostsList />
