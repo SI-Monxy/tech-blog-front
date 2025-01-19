@@ -24,18 +24,18 @@ export default async function PostPage({ params }: Props) {
   const content = await markdownToHtml(post.contentHtml);
 
   return (
-    <article className="container max-w-4xl py-8">
-      <BackButton />
-      <header className="mb-8">
-        <h1 className="scroll-m-20 text-4xl font-bold tracking-tight mb-2">
-          {post.title}
-        </h1>
-        <time className="text-sm text-muted-foreground">{post.date}</time>
-      </header>
-      <div
-        className="prose prose-slate dark:prose-invert max-w-none"
-        dangerouslySetInnerHTML={{ __html: content }}
-      />
+    <article className="container max-w-4xl mx-auto py-8">
+        <BackButton />
+        <header className="mb-8">
+            <h1 className="scroll-m-20 text-4xl font-bold tracking-tight mb-2">
+            {post.title}
+            </h1>
+            <time className="text-sm text-muted-foreground">{post.date}</time>
+        </header>
+        <div
+            className="prose prose-slate dark:prose-invert max-w-none"
+            dangerouslySetInnerHTML={{ __html: content }}
+        />
     </article>
   );
 }
