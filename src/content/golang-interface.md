@@ -122,10 +122,12 @@ func main() {
     var greeters []Greeter
 
     // PersonとRobotのインスタンスを作成し、Greeterインターフェースのスライスに追加
+
     greeters = append(greeters, Person{Name: "Alice"})
     greeters = append(greeters, Robot{ID: "R2D2"})
 
     // Greeterインターフェースを実装する全てのインスタンスのGreetメソッドを呼び出し
+    
     for _, greeter := range greeters {
         greeter.Greet()
     }
