@@ -24,19 +24,46 @@ export default async function PostPage({ params }: Props) {
   const content = await markdownToHtml(post.contentHtml);
 
   return (
-    <article className="container max-w-4xl mx-auto py-8">
-        <BackButton />
-        <header className="mb-8">
-            <h1 className="scroll-m-20 text-4xl font-bold tracking-tight mb-2">
+    <div className="min-h-screen bg-background">
+      <article className="container max-w-3xl mx-auto px-4 py-12">
+        <div className="mb-8">
+          <BackButton />
+        </div>
+
+        <header className="mb-12">
+          <h1 className="text-4xl font-bold tracking-tight text-foreground">
             {post.title}
-            </h1>
-            <time className="text-sm text-muted-foreground">{post.date}</time>
+          </h1>
+          <time className="text-sm text-muted-foreground mt-2 block">
+            {post.date}
+          </time>
         </header>
+
         <div
-            className="prose prose-slate dark:prose-invert max-w-none"
-            dangerouslySetInnerHTML={{ __html: content }}
+          className="markdown-content prose dark:prose-invert max-w-none
+          prose-pre:border-border
+          prose-pre:bg-card
+          prose-code:bg-muted
+          prose-code:text-accent-foreground
+          prose-headings:text-foreground
+          prose-p:text-foreground/90"
+          dangerouslySetInnerHTML={{ __html: content }}
         />
-    </article>
+      </article>
+    </div>
+    // <article className="container max-w-4xl mx-auto py-8">
+    //     <BackButton />
+    //     <header className="mb-8">
+    //         <h1 className="scroll-m-20 text-4xl font-bold tracking-tight mb-2">
+    //         {post.title}
+    //         </h1>
+    //         <time className="text-sm text-muted-foreground">{post.date}</time>
+    //     </header>
+    //     <div
+    //         className="prose prose-slate dark:prose-invert max-w-none"
+    //         dangerouslySetInnerHTML={{ __html: content }}
+    //     />
+    // </article>
   );
 }
 
