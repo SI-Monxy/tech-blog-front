@@ -1,5 +1,5 @@
 ---
-title: "Go言語の構造体とインターフェースについてまとめてみた"
+title: "Go言語の構造体とインターフェースについて"
 date: "2025-01-23"
 description: "Go言語は、オブジェクト指向プログラミング（OOP）の概念をサポートしており、構造体とインターフェースを使用することで実現できます。この記事では、Goにおける構造体とインターフェースの基本を理解し、オブジェクト指向のプログラミング方法について学びます。"
 ---
@@ -127,7 +127,7 @@ func main() {
     greeters = append(greeters, Robot{ID: "R2D2"})
 
     // Greeterインターフェースを実装する全てのインスタンスのGreetメソッドを呼び出し
-    
+
     for _, greeter := range greeters {
         greeter.Greet()
     }
