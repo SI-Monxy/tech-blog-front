@@ -1,95 +1,36 @@
-# Shimon's Tech Blog (フロントエンド)
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-<img src="https://img.shields.io/badge/Next.js-15.0-black?style=flat&logo=next.js" alt="Next.js version" /> <img src="https://img.shields.io/badge/React-19.0-blue?style=flat&logo=react" alt="React version" /> <img src="https://img.shields.io/badge/TypeScript-5.0-blue?style=flat&logo=typescript" alt="TypeScript version" /> <img src="https://img.shields.io/badge/shadcn%2Fui-latest-black?style=flat" alt="shadcn/ui" />
+## Getting Started
 
-モダンなWeb技術を活用した個人テックブログのフロントエンド実装です。Next.js 15の最新機能を活用し、パフォーマンスとユーザー体験の最適化を実現しています。
+First, run the development server:
 
-## 主な機能と技術スタック
-
-### フロントエンド
-- **Next.js 15**
-    - App Routerによる最新のルーティング
-    - Server Components活用による最適化
-    - TypeScriptによる型安全性
-
-- **UI/UX**
-    - shadcn/uiによるモダンなコンポーネント
-    - ダークモード対応
-    - レスポンシブデザイン
-    - Tailwind CSSによるスタイリング
-
-- **コンテンツ管理**
-    - マークダウンベースの記事管理
-    - シンタックスハイライト対応
-    - unified/remarkによるマークダウン変換
-
-### 使用技術
-- React 19
-- TypeScript 5
-- Tailwind CSS
-- shadcn/ui
-- next-themes
-- unified/remark/rehype
-- Vercel
-
-## プロジェクト構成
-```
-tech-blog/
-├── app/                    # App Router pages
-│   ├── layout.tsx         # ルートレイアウト
-│   ├── page.tsx           # トップページ
-│   └── [id]/              # 記事詳細ページ
-├── components/            # UIコンポーネント
-│   ├── ui/               # shadcn/uiコンポーネント
-│   └── blog/             # ブログ固有のコンポーネント
-├── content/              # マークダウンコンテンツ
-├── lib/                  # ユーティリティ関数
-└── public/              # 静的アセット
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## 開発ステータス
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### 実装済み ✅
-- プロジェクトの基本設定
-- マークダウンパース機能
-- ダークモード切り替え
-- レスポンシブデザイン
-- アクセシビリティ対応
-- シンタックスハイライト
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-### 開発中 🚧
-- 記事一覧ページのUIブラッシュアップ
-- 画像最適化
-- SEO対策強化
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-### 今後の展望 📝
-- 検索機能
-- タグ機能
-- Goバックエンドとの連携
-- コメント機能
-- SNSシェア機能
+## Learn More
 
-## 工夫した点
+To learn more about Next.js, take a look at the following resources:
 
-1. **パフォーマンス最適化**
-   - Server Componentsの適切な活用
-   - 画像の最適化
-   - 効率的なコード分割
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-2. **開発体験の向上**
-   - 一貫性のあるコーディング規約
-   - 型安全性の確保
-   - モジュール化された構造
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-3. **UI/UXの改善**
-   - ダークモード対応
-   - アクセシビリティへの配慮
-   - レスポンシブなデザイン
+## Deploy on Vercel
 
-## 作者
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-岩田史門 ([@SI_Monxy](https://x.com/SI_Monxy))
-
----
-
-このプロジェクトは私の技術的な成長とWeb開発スキルの向上を目的として開発しています。継続的に機能追加とリファクタリングを行い、よりよいブログプラットフォームを目指しています。
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
