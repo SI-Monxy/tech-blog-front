@@ -24,7 +24,7 @@ export default function IndexPage() {
                         About Me
                     </h2>
                     <p className="text-muted-foreground sm:text-lg sm:leading-7">
-                        ソフトウェアエンジニアの史門です。
+                        ソフトウェアエンジニアの Shimon です。
                         事業会社の新規事業部にてSaaSの開発を行っています。PHP, Laravel, Goを用いたバックエンドの開発が強みです。
                         TypeScript, Reactを用いたフロントエンドの開発経験もあるため、フルスタックな開発が可能です。
                         このブログでは、日々の学びや技術的なメモを記事として残しています。また、技術的な記事の他にも、技術書を読んだ際の学びやキャリアなどについてもアウトプットしています。
