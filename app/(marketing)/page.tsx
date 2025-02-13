@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function IndexPage() {
     return (
         <>
-            <section className="px-4 pt-6 md:pt-10 lg:py-32 pb-8 md:pb-12">
+            <section className="px-4 pt-6 md:pt-10 lg:pt-20 pb-8 md:pb-12">
                 <div className="container mx-auto text-center flex flex-col items-center gap-4 max-w-[64rem]">
                     <Link href= {siteConfig.links.x} className="bg-muted px-4 py-1.5 rounded-2xl font-medium text-sm" target="_blank" rel="noreferrer">Xをフォローする</Link>
                     <h1 className="font-extrabold text-3xl sm:text-5xl md:text-6xl lg:text-7xl">Shimon's Tech Blog</h1>
@@ -409,7 +409,7 @@ export default function IndexPage() {
                 </div>
             </section>
 
-            <section id="contact" className="container mx-auto px-4 py-8 md:py-12 lg:py-24">
+            <section id="contact" className="container mx-auto px-4 py-8 md:py-12 lg:py-12">
                 <div className="max-w-[58rem] mx-auto text-center flex flex-col gap-4">
                     <h2 className="font-extrabold text-3xl md:text-6xl">Contact Me</h2>
                     <p className="text-muted-foreground sm:text-lg sm:leading-7">
@@ -419,7 +419,6 @@ export default function IndexPage() {
                     </p>
                     <Link href={siteConfig.links.x} className="underline underline-offset-4" target="_blank" rel="noreferrer">Xアカウントに問い合わせする</Link>
                 </div>
-
             </section>
         </>
     )
