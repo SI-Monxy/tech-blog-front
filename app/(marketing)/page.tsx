@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function IndexPage() {
     return (
         <>
-            <section className="pt-6 md:pt-10 lg:py-32 pb-8 md:pb-12">
+            <section className="px-4 pt-6 md:pt-10 lg:py-32 pb-8 md:pb-12">
                 <div className="container mx-auto text-center flex flex-col items-center gap-4 max-w-[64rem]">
                     <Link href= {siteConfig.links.x} className="bg-muted px-4 py-1.5 rounded-2xl font-medium text-sm" target="_blank" rel="noreferrer">Xをフォローする</Link>
                     <h1 className="font-extrabold text-3xl sm:text-5xl md:text-6xl lg:text-7xl">Shimon's Tech Blog</h1>
@@ -18,18 +18,15 @@ export default function IndexPage() {
                 </div>
             </section>
 
-            <section id="about-me" className="container mx-auto py-8 md:py-12 lg:py-24 bg-slate-50 space-y-6">
+            <section id="about-me" className="container mx-auto px-4 py-8 md:py-12 lg:py-24 bg-slate-50 space-y-6">
                 <div className="text-center space-y-6 max-w-[58rem] mx-auto">
                     <h2 className="font-extrabold text-3xl md:text-6xl">
                         About Me
                     </h2>
                     <p className="text-muted-foreground sm:text-lg sm:leading-7">
-                        ソフトウェアエンジニアの史門です。<br/>事業会社の新規事業部にてSaaSの開発を行っています。
-                    </p>
-                    <p className="text-muted-foreground sm:text-lg sm:leading-7">
-                        PHP, Laravel, Goを用いたバックエンドの開発が強みです。<br/>TypeScript, Reactを用いたフロントエンドの開発経験もあるため、フルスタックな開発が可能です。
-                    </p>
-                    <p className="text-muted-foreground sm:text-lg sm:leading-7">
+                        ソフトウェアエンジニアの史門です。
+                        事業会社の新規事業部にてSaaSの開発を行っています。PHP, Laravel, Goを用いたバックエンドの開発が強みです。
+                        TypeScript, Reactを用いたフロントエンドの開発経験もあるため、フルスタックな開発が可能です。
                         このブログでは、日々の学びや技術的なメモを記事として残しています。また、技術的な記事の他にも、技術書を読んだ際の学びやキャリアなどについてもアウトプットしています。
                     </p>
                 </div>
@@ -40,7 +37,7 @@ export default function IndexPage() {
                     <div className="mx-auto bg-background border p-2 rounded-lg">
                         {/* INFO: pタグで詳細文を記述する場合は下記のcssを適用する */}
                         {/* <div className="flex flex-col justify-between p-6 md:h-[160px] h-[180px]"> */}
-                        <div className="w-[100px] h-[100px] flex flex-col items-center justify-center p-4">
+                        <div className="w-[90px] h-[90px] flex flex-col items-center justify-center p-4">
                             <svg 
                                 xmlns="http://www.w3.org/2000/svg" 
                                 width="45" 
@@ -74,7 +71,7 @@ export default function IndexPage() {
                     <div className="mx-auto bg-background border p-2 rounded-lg">
                         {/* INFO: pタグで詳細文を記述する場合は下記のcssを適用する */}
                         {/* <div className="flex flex-col justify-between p-6 md:h-[160px] h-[180px]"> */}
-                        <div className="w-[100px] h-[100px] flex flex-col items-center justify-center p-4">
+                        <div className="w-[90px] h-[90px] flex flex-col items-center justify-center p-4">
                             <svg 
                                 xmlns="http://www.w3.org/2000/svg" 
                                 width="45" 
@@ -93,7 +90,7 @@ export default function IndexPage() {
                     <div className="mx-auto bg-background border p-2 rounded-lg">
                         {/* INFO: pタグで詳細文を記述する場合は下記のcssを適用する */}
                         {/* <div className="flex flex-col justify-between p-6 md:h-[160px] h-[180px]"> */}
-                        <div className="w-[100px] h-[100px] flex flex-col items-center justify-center p-4">
+                        <div className="w-[90px] h-[90px] flex flex-col items-center justify-center p-4">
                             <svg 
                                 xmlns="http://www.w3.org/2000/svg" 
                                 width="45" 
@@ -150,7 +147,7 @@ export default function IndexPage() {
                     <div className="mx-auto bg-background border p-2 rounded-lg">
                         {/* INFO: pタグで詳細文を記述する場合は下記のcssを適用する */}
                         {/* <div className="flex flex-col justify-between p-6 md:h-[160px] h-[180px]"> */}
-                        <div className="w-[100px] h-[100px] flex flex-col items-center justify-center p-4">
+                        <div className="w-[90px] h-[90px] flex flex-col items-center justify-center p-4">
                             <svg 
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="45" 
@@ -173,7 +170,7 @@ export default function IndexPage() {
                     <div className="mx-auto bg-background border p-2 rounded-lg">
                         {/* INFO: pタグで詳細文を記述する場合は下記のcssを適用する */}
                         {/* <div className="flex flex-col justify-between p-6 md:h-[160px] h-[180px]"> */}
-                        <div className="w-[100px] h-[100px] flex flex-col items-center justify-center p-4">
+                        <div className="w-[90px] h-[90px] flex flex-col items-center justify-center p-4">
                             <svg 
                                 xmlns="http://www.w3.org/2000/svg" 
                                 width="45" 
@@ -192,7 +189,7 @@ export default function IndexPage() {
                     <div className="mx-auto bg-background border p-2 rounded-lg">
                         {/* INFO: pタグで詳細文を記述する場合は下記のcssを適用する */}
                         {/* <div className="flex flex-col justify-between p-6 md:h-[160px] h-[180px]"> */}
-                        <div className="w-[100px] h-[100px] flex flex-col items-center justify-center p-4">
+                        <div className="w-[90px] h-[90px] flex flex-col items-center justify-center p-4">
                             <svg 
                                 xmlns="http://www.w3.org/2000/svg" 
                                 width="45" 
@@ -214,7 +211,7 @@ export default function IndexPage() {
                     <div className="mx-auto bg-background border p-2 rounded-lg">
                         {/* INFO: pタグで詳細文を記述する場合は下記のcssを適用する */}
                         {/* <div className="flex flex-col justify-between p-6 md:h-[160px] h-[180px]"> */}
-                        <div className="w-[100px] h-[100px] flex flex-col items-center justify-center p-4">
+                        <div className="w-[90px] h-[90px] flex flex-col items-center justify-center p-4">
                             <svg 
                                 xmlns="http://www.w3.org/2000/svg" 
                                 width="45" 
@@ -233,7 +230,7 @@ export default function IndexPage() {
                     <div className="mx-auto bg-background border p-2 rounded-lg">
                         {/* INFO: pタグで詳細文を記述する場合は下記のcssを適用する */}
                         {/* <div className="flex flex-col justify-between p-6 md:h-[160px] h-[180px]"> */}
-                        <div className="w-[100px] h-[100px] flex flex-col items-center justify-center p-4">
+                        <div className="w-[90px] h-[90px] flex flex-col items-center justify-center p-4">
                             <svg 
                                 xmlns="http://www.w3.org/2000/svg" 
                                 width="45" 
@@ -261,7 +258,7 @@ export default function IndexPage() {
                     <div className="mx-auto bg-background border p-2 rounded-lg">
                         {/* INFO: pタグで詳細文を記述する場合は下記のcssを適用する */}
                         {/* <div className="flex flex-col justify-between p-6 md:h-[160px] h-[180px]"> */}
-                        <div className="w-[100px] h-[100px] flex flex-col items-center justify-center p-4">
+                        <div className="w-[90px] h-[90px] flex flex-col items-center justify-center p-4">
                             <svg 
                                 xmlns="http://www.w3.org/2000/svg" 
                                 width="45" 
@@ -295,7 +292,7 @@ export default function IndexPage() {
                     <div className="mx-auto bg-background border p-2 rounded-lg">
                         {/* INFO: pタグで詳細文を記述する場合は下記のcssを適用する */}
                         {/* <div className="flex flex-col justify-between p-6 md:h-[160px] h-[180px]"> */}
-                        <div className="w-[100px] h-[100px] flex flex-col items-center justify-center p-4">
+                        <div className="w-[90px] h-[90px] flex flex-col items-center justify-center p-4">
                             <svg 
                                 xmlns="http://www.w3.org/2000/svg" 
                                 width="45" 
@@ -315,7 +312,7 @@ export default function IndexPage() {
                     <div className="mx-auto bg-background border p-2 rounded-lg">
                         {/* INFO: pタグで詳細文を記述する場合は下記のcssを適用する */}
                         {/* <div className="flex flex-col justify-between p-6 md:h-[160px] h-[180px]"> */}
-                        <div className="w-[100px] h-[100px] flex flex-col items-center justify-center p-4">
+                        <div className="w-[90px] h-[90px] flex flex-col items-center justify-center p-4">
                             <svg 
                                 xmlns="http://www.w3.org/2000/svg" 
                                 width="50" 
@@ -349,7 +346,7 @@ export default function IndexPage() {
                     <div className="mx-auto bg-background border p-2 rounded-lg">
                         {/* INFO: pタグで詳細文を記述する場合は下記のcssを適用する */}
                         {/* <div className="flex flex-col justify-between p-6 md:h-[160px] h-[180px]"> */}
-                        <div className="w-[100px] h-[100px] flex flex-col items-center justify-center p-4">
+                        <div className="w-[90px] h-[90px] flex flex-col items-center justify-center p-4">
                             <svg 
                                 xmlns="http://www.w3.org/2000/svg" 
                                 width="45" 
@@ -370,7 +367,7 @@ export default function IndexPage() {
                     <div className="mx-auto bg-background border p-2 rounded-lg">
                         {/* INFO: pタグで詳細文を記述する場合は下記のcssを適用する */}
                         {/* <div className="flex flex-col justify-between p-6 md:h-[160px] h-[180px]"> */}
-                        <div className="w-[100px] h-[100px] flex flex-col items-center justify-center p-4">
+                        <div className="w-[90px] h-[90px] flex flex-col items-center justify-center p-4">
                             <svg 
                                 xmlns="http://www.w3.org/2000/svg" 
                                 width="45" 
@@ -393,7 +390,7 @@ export default function IndexPage() {
                     <div className="mx-auto bg-background border p-2 rounded-lg">
                         {/* INFO: pタグで詳細文を記述する場合は下記のcssを適用する */}
                         {/* <div className="flex flex-col justify-between p-6 md:h-[160px] h-[180px]"> */}
-                        <div className="w-[100px] h-[100px] flex flex-col items-center justify-center p-4">
+                        <div className="w-[90px] h-[90px] flex flex-col items-center justify-center p-4">
                             <svg 
                                 xmlns="http://www.w3.org/2000/svg" 
                                 width="45" 
@@ -410,6 +407,19 @@ export default function IndexPage() {
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <section id="contact" className="container mx-auto px-4 py-8 md:py-12 lg:py-24">
+                <div className="max-w-[58rem] mx-auto text-center flex flex-col gap-4">
+                    <h2 className="font-extrabold text-3xl md:text-6xl">Contact Me</h2>
+                    <p className="text-muted-foreground sm:text-lg sm:leading-7">
+                        お問い合わせは、下記のXアカウントにDMでご連絡ください。
+                        <br/>
+                        ご連絡お待ちしております。
+                    </p>
+                    <Link href={siteConfig.links.x} className="underline underline-offset-4" target="_blank" rel="noreferrer">Xアカウントに問い合わせする</Link>
+                </div>
+
             </section>
         </>
     )
