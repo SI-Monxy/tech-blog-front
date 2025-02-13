@@ -17,6 +17,17 @@ export default function IndexPage() {
                     </div>
                 </div>
             </section>
+
+            <section id="about-me" className="container mx-auto py-8 md:py-12 lg:py-24 bg-slate-50">
+                <div className="text-center space-y-6 max-w-[58rem] mx-auto">
+                    <h2 className="font-extrabold text-3xl md:text-6xl">
+                        About Me
+                    </h2>
+                    <p className="text-muted-foreground sm:text-lg sm:leading-7">
+                        ソフトウェアエンジニアの史門です。Web開発やモバイルアプリ開発が得意です。PHP, Laravel, GoでのAPI開発、 TypeScript, Reactを用いたフロントエンド開発などフルスタックな開発が得意です。
+                    </p>
+                </div>
+            </section>
         </>
     )
 }
