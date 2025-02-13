@@ -8,5 +8,6 @@ export const siteConfig: SiteConfig = {
     links: {
         x: "https://x.com/SI_Monxy",
         github: "https://github.com/SI-Monxy",
+        vercel: "https://vercel.com/",
     },
 };

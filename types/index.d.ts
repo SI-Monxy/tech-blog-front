@@ -12,6 +12,7 @@ export type SiteConfig = {
     links: {
         x: string;
         github: string;
+        vercel: string;
     };
 };
 
