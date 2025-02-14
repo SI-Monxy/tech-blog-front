@@ -20,19 +20,21 @@ export default function BlogPage() {
                 </div>
             </div>
             <hr className="my-8" />
-            {posts.map((post) => (
-                <article key={post._id} className="relative flex flex-col items-center text-left">
-                    {post.image && <Image src={post.image} alt={post.title} width={604} height={252} className="rounded-md border bg-muted"/>}
-                    <h2 className="text-2xl font-extrabold">
-                        {post.title}
-                    </h2>
-                    <p className="text-muted-foreground">{post.description}</p>
-                    <p className="text-sm text-muted-foreground">
-                        {format(post.date, "yyyy/MM/dd")}
-                    </p>
-                    <Link href={post.slug} className="absolute inset-0"/>
-                </article>
-            ))}
+            <div className="grid sm:grid-cols-2 gap-10">
+                {posts.map((post) => (
+                    <article key={post._id} className="relative flex flex-col items-center text-left">
+                        {post.image && <Image src={post.image} alt={post.title} width={604} height={252} className="rounded-md border bg-muted"/>}
+                        <h2 className="text-2xl font-extrabold">
+                            {post.title}
+                        </h2>
+                        <p className="text-muted-foreground">{post.description}</p>
+                        <p className="text-sm text-muted-foreground">
+                            {format(post.date, "yyyy/MM/dd")}
+                        </p>
+                        <Link href={post.slug} className="absolute inset-0"/>
+                    </article>
+                ))}
+            </div>
         </div>
     );
 }
