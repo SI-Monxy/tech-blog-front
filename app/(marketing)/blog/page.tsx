@@ -1,4 +1,5 @@
 import { allPosts } from "@/.contentlayer/generated";
+import { format } from "date-fns";
 import Image from "next/image";
 
 export default function BlogPage() {
@@ -29,7 +30,7 @@ export default function BlogPage() {
                     )}
                     {post.date && (
                         <p className="text-sm text-muted-foreground">
-                            {post.date}
+                            {format(post.date, "yyyy/MM/dd")}
                         </p>
                     )}
                 </article>
