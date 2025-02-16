@@ -1,4 +1,5 @@
 import { allPosts } from "@/.contentlayer/generated";
+import Mdx from "@/components/mdx-component";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { format } from "date-fns";
@@ -42,7 +43,7 @@ export default async function PostPage({
                     className="my-8 rounded-md border bg-muted"
                 />
             )}
-            <div>{post.body.html}</div>
+            <Mdx code={post.body.code} />
             <hr className="mt-12" />
             <div className="py-6 text-center lg:py-10">
                 <Link href={"/blog"} className={cn(buttonVariants({variant: "secondary"}))}>
