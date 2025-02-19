@@ -25,7 +25,7 @@ export default async function PostPage({
     }
 
     return (
-        <article className="container mx-auto max-w-3xl py-6 lg:py-10">
+        <article className="container mx-auto max-w-3xl py-6 lg:py-10 px-4">
             <div>
                 {post.date && (
                     <time>Published on {format(post.date, "yyyy/MM/dd")}</time>
