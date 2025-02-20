@@ -1,15 +1,45 @@
 import { allPosts } from "@/.contentlayer/generated";
 import Mdx from "@/components/mdx-component";
 import { buttonVariants } from "@/components/ui/button";
+import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import { format } from "date-fns";
+
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Metadata } from "next/types";
 
 async function getPostFromSlug(slug: string) {
     const post = allPosts.find((post) => post.slugAsParams === slug);
     return post;
+}
+
+export async function generateMetadata({params,}: {params: {slug: string}}) :Promise<Metadata>{
+    const page = await getPostFromSlug(params.slug);
+    if (!page) {
+        return {};
+    }
+    return {
+        title: page.title,
+        description: page.description,
+        openGraph: {
+            type: "article",
+            locale: "ja",
+            url: siteConfig.url,
+            title: siteConfig.name,
+            description: siteConfig.description,
+            siteName: siteConfig.name,
+            images: [],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: siteConfig.name,
+            description: siteConfig.description,
+            images: [],
+            creator: "@SI_Monxy",
+        },
+    }
 }
 
 export default async function PostPage({
