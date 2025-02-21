@@ -4,8 +4,7 @@ import { cn } from "@/lib/utils";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { buttonVariants } from "./ui/button";
-// import { Icon } from "./icon";
-// import { signIn } from "next-auth/react";
+import { signIn } from "next-auth/react";
 import { useState } from "react";
 import { Icon } from "./icon";
 
@@ -41,10 +40,10 @@ export default function UserAuthForm() {
       <div className="flex flex-col gap-3">
         <button
           className={cn(buttonVariants({ variant: "outline" }))}
-        //   onClick={() => {
-        //     setIsGithubLoading(true);
-        //     signIn("github");
-        //   }}
+          onClick={() => {
+            setIsGithubLoading(true);
+            signIn("github");
+          }}
         >
           {isGithubLoading ? (
             <Icon.spinner className="mr-2 animate-spin" />
