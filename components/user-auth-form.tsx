@@ -52,8 +52,7 @@ export default function UserAuthForm() {
           )}
           Github
         </button>
-
-        {/* <button
+        <button
           className={cn(buttonVariants({ variant: "outline" }))}
           onClick={() => {
             setIsGoogleLoading(true);
@@ -66,7 +65,7 @@ export default function UserAuthForm() {
             <Icon.google className="mr-2" />
           )}
           Google
-        </button> */}
+        </button>
       </div>
     </div>
   );
