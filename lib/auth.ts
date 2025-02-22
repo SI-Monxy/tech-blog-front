@@ -1,23 +1,23 @@
 import { NextAuthOptions } from "next-auth";
 import Github from "next-auth/providers/github";
 import Google from "next-auth/providers/google";
-import { PrismaClient } from "@prisma/client";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
-
-const prisma = new PrismaClient();
+import { db } from "./db";
 
 export const authOptions: NextAuthOptions = {
     providers: [
         Github({
             clientId: process.env.GITHUB_CLIENT_ID!,
             clientSecret: process.env.GITHUB_CLIENT_SECRET!,
+            allowDangerousEmailAccountLinking: true,
         }),
         Google({
             clientId: process.env.GOOGLE_CLIENT_ID!,
             clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+            allowDangerousEmailAccountLinking: true,
         })
     ],
-    adapter: PrismaAdapter(prisma),
+    adapter: PrismaAdapter(db),
     pages: {
         signIn: "/login",
     },
@@ -31,5 +31,8 @@ export const authOptions: NextAuthOptions = {
             }
             return session;
         }
+    },
+    session: {
+        strategy: "jwt",
     }
 };
