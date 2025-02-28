@@ -19,3 +19,24 @@ export type SiteConfig = {
 export type MarketingConfig = {
     mainNav: NavItem[];
 };
+
+export type SidebarNavItem = {
+    title: string;
+    disabled?: boolean;
+    external?: boolean;
+    icon?: keyof typeof Icon;
+} & (
+  | {
+        href: string;
+        items?: never;
+    }
+  | {
+        href?: string;
+        items: NavItem[];
+    }
+);
+
+export type DashboardConfig = {
+    mainNav: NavItem[];
+    sidebarNav: SidebarNavItem[];
+};
